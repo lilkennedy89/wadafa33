@@ -24,7 +24,7 @@ a{
 .header-main{
 	/* background-color: #18c297; */
 	display: flex;
-	justify-content: space-between;
+	justify-content: space-around ;
 	align-items: center;
 }
 .header .logo{
@@ -104,6 +104,16 @@ a{
 	opacity:0;
 	visibility: hidden;
 }
+
+@media (max-width: 992px) {
+	.header-main{
+		/* background-color: #18c297; */
+		display: flex;
+		justify-content: space-between ;
+		align-items: center;
+	}
+}
+
 @media(min-width: 992px){
 .header .menu > .menu-item-has-children:hover > .sub-menu{
 	transform: translateY(0);
