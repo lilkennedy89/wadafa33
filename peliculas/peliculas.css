@@ -271,29 +271,23 @@ a{
 	}
 }
 
+
+
 /* displey gid start */
 .header {
 	grid-area: header;
 }
 
-.slider {
-	grid-area: slider;
-	background: #18142f;
+.datos {
+	grid-area: datos;
 }
 
-.txt-estrenos {
-	grid-area: txt-estrenos;
-	background: #18142f;
-}
-
-.peli-estrenos {
-	grid-area: peli-estrenos;
-	background: #18142f;
+.ver-peli {
+	grid-area: ver-peli;
 }
 
 .footer {
 	grid-area: footer;
-	background: #18142f;
 	/* border-top: 0.1rem solid rgba(255, 255, 255, 0.2); */
 }
 
@@ -304,183 +298,117 @@ a{
 
 	grid-template: 
 	"header" auto
-	"slider" auto
-	"txt-estrenos" 50px
-	"peli-estrenos" auto
-	"footer"	auto /
+	"datos" auto
+	"ver-peli" auto
+	"footer"	50px /
 	auto;
 }
 /* displey grid end */
 
 
+/* datos start */
 
-/* slider start */
-.container2 {
-    width: 95%;
-    margin: 0 auto;
+.portada {
+    grid-area: portada;
 }
 
-.slider {
-    padding: 10px 0;
+.titulo {
+    grid-area: titulo;
 }
 
-.slider-container {
+.sinopsis {
+    grid-area: sinopsis;
+}
+
+.extras {
+    grid-area: extras;
+}
+
+.contenedor-datos {
+    margin: 50px 50px;
     display: grid;
-    grid-template-columns: 50px 1fr 50px;
-    align-items: center;
-    gap: 1em;
+
+    grid-template: 
+	"portada    titulo"     50px
+	"portada    sinopsis"   auto
+	"portada    extras"     auto/
+	300px       auto;
 }
 
-.slider-body {
-    grid-column: 2/3;
-    grid-row: 1/2;
-    opacity: 0;
-    pointer-events: none;
-    display: grid;
-    grid-template-columns: 1fr max-content;
-    align-items: center;
-    transition: opacity 1.5s;
+@media (max-width: 768px) {
+    .contenedor-datos {
+        align-items: center;
+    
+        grid-template: 
+        "titulo"     auto
+        "portada"   auto
+        "sinopsis"     auto
+        "extras"        auto/
+        auto       auto;
+    }
+
+    .portada img {
+        margin-top: 15px;
+    }
+
+    .sinopsis p {
+        font-size: 14px;
+        margin: 15px 0;
+    }
 }
 
-.slider-body--show {
-    opacity: 1;
-    pointer-events: unset;
-}
-
-.slider-texts {
-    max-width: 600px;
-	color: #eeee;
-}
-
-.subtitle {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-	cursor: default;
-}
-
-.slider-review {
-    font-weight: 300;
-    font-size: 20px;
-    line-height: 1.7;
-}
-
-.slider-img {
-    width: 230px;
+.portada img {
+    width: 250px;
     height: auto;
-    object-fit: cover;
-    display: block;
-    margin: 0 auto;
 }
 
-.slider-arrow {
-    cursor: pointer;
-    width: 90%;
+.titulo h1 {
+    color: #eeee;
+    font-weight: 200;
 }
 
-.slider-arrow:nth-last-of-type(2){
-    justify-self: end;
+.sinopsis p {
+    color: #8799b4;
 }
 
-/*moviles*/
+.extras {
+    color: #eee;
+}
+
+.extras span {
+    color: #8799b4;
+}
+/* datos end */
+
+
+/* ver-peli start */
+.ver-peli {
+    text-align: center;
+}
+
 @media (max-width: 768px) {
-    .slider-body {
-        grid-template-columns: 1fr;
-        grid-template-rows: max-content 1fr;
-        gap: 1em;
-    }
-
-    .slider-picture {
-        grid-row: 1/2;
-    }
-
-    .slider-img {
-        width: 210px;
-        height: auto;
-    }
-
-	
-}
-
-@media (max-width: 425px) {
-    .slider-container {
-        grid-template-columns: 25px 1fr 25px;
-    }
-
-    .slider-arrow {
+    .ver-peli iframe {
         width: 100%;
+        height: 240px;
     }
 
-    .slider-img {
-        width: 180px;
-        height: auto;
-    }
-
-    .subtitle {
-        font-size: 2rem;
-        margin-bottom: 15px;
-    }
-
-    .slider-review {
-        font-size: 1rem;
+    .ver-peli {
+        padding: 0 10px;
     }
 }
-/* slider end */
 
-/* estrenos txt start */
-.txt-estrenos {
-	padding: 10px 10px;
+@media (max-width: 500px) {
+    .ver-peli iframe {
+        width: 100%;
+        height: 240px;
+    }
+
+    .ver-peli {
+        padding: 0 10px;
+    }
 }
+/* ver-peli end */
 
-.txt-estrenos h1 {
-	color: #eee;
-	text-transform: capitalize;
-	font-weight: 600;
-	margin-left: 20px;
-}
-
-@media (max-width: 768px) {
-	.txt-estrenos {
-		text-align: center;
-	}
-}
-/* estrrenos txt end */
-
-/* grid container de pelicuals */
-.grid-container-pelis {
-    text-align: center;
-    margin-top: 20px;
-    margin-left: 30px;
-    margin-right: 30px;
-    display: grid;
-    gap: 10px;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-}
-
-.grid-container-pelis > div {
-    height: 300px;
-    text-align: center;
-}
-/*contenedor grid-----final*/
-
-.img-caratula {
-    margin-top: 10px;
-
-    transition: 300ms;
-}
-
-.img-caratula:hover {
-    transform: scale(1.07);
-}
-
-.link h3 {
-    margin-top: 7px;
-    font-size: 0.9rem;
-}
-
-.link {
-    text-decoration: none;
-    color: white;
-}
 
 /* footer start */
 
