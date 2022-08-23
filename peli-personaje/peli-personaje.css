@@ -105,8 +105,6 @@ a{
 	transition: all 0.3s ease;
 	opacity:0;
 	visibility: hidden;
-	height: auto;
-	border-radius: 15px;
 }
 
 .sub-menu .menu-item a {
@@ -289,7 +287,6 @@ a{
 /* displey gid start */
 .header {
 	grid-area: header;
-	margin-bottom: 60px;
 }
 
 .swiper {
@@ -397,11 +394,6 @@ a{
 	.swiper-hero .swiper-button-next {
   		margin-left: 0;   /*magenss del boton*/
   		margin-right: 0;  /*magenss del boton*/
-	}
-
-	.header {
-		grid-area: header;
-		margin-bottom: 20px;
 	}
 }
 
