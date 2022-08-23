@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>cronología</title>
+   <!-- link de css -->
+   <link rel="stylesheet" href="cronologico.css">
+   <!-- link del icono -->
+   <link rel="icon" href="../assets/icon.svg">
+   <!-- link del cdn iconos -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+   <!-- font awesome cdn link  -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+   <!-- link de swiper -->
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+
+</head>
+<body>
+
+   <div class="grid-container">
+
+      <!-- header start -->
+      <header class="header">
+      <div class="container">
+         <div class="header-main">
+            <div class="logo">
+                <a href="../index.html"><img src="../assets/icon.svg" alt=""></a>
+               <a href="../index.html">strange</a>
+            </div>
+            <div class="open-nav-menu">
+               <span></span>
+            </div>
+            <div class="menu-overlay">
+            </div>
+            <!-- navigation menu start -->
+            <nav class="nav-menu">
+              <div class="close-nav-menu">
+                 <img src="../img/close.svg" alt="close">
+              </div>
+              <ul class="menu">
+                <li class="menu-item">
+                   <a href="../index.html">inicio</a>
+                </li>
+                 <li class="menu-item menu-item-has-children">
+                    <a href="#" data-toggle="sub-menu">peliculas <i class="plus"></i></a>
+                    <ul class="sub-menu">
+                        <li class="menu-item"><a href="../pelis-año/peli-año.html">año</a></li>
+                        <li class="menu-item"><a href="../peli-personaje/peli-personaje.html">personaje</a></li>
+                    </ul>
+                 </li>
+                 <li class="menu-item menu-item-has-children">
+                    <a href="#" data-toggle="sub-menu">series <i class="plus"></i></a>
+                    <ul class="sub-menu">
+                        <li class="menu-item"><a href="../series-año/series-año.html">año</a></li>
+                        <li class="menu-item"><a href="../series-personaje/series-personaje.html">personaje</a></li>
+                    </ul>
+                 </li>
+                 <li class="menu-item" id="crono">
+                  <a href="cronologico.html">cronología</a>
+               </li>
+                 <li class="menu-item">
+                    <a href="#">Contact</a>
+                 </li>
+              </ul>
+            </nav>
+            <!-- navigation menu end -->
+         </div>
+      </div>
+      </header>
+      <!-- header end -->
+   
+      <!-- slider start -->
+      <div class="title-crono">
+        <div class="titulo">
+            <h2>cronología</h2>
+        </div>
+      </div>
+      <!-- slider end -->
+   
+      <!-- estrenos start -->
+      <div class="wrapper">
+            <div class="item">
+                <a class="link" href="#">
+                    <img class="img-caratula" src="https://pics.filmaffinity.com/captain_america_the_first_avenger-163477639-large.jpg" alt=""
+                          width="170" height="240">
+                 </a>
+                 <h3>Capitán América: El primer vengador</h3>
+                 <p> <span>año: </span>  2011 </p>
+                 <p> <span>tipo:</span> pelicula </p>
+            </div>
+
+            <div class="item">
+                <a class="link" href="#">
+                    <img class="img-caratula" src="https://pics.filmaffinity.com/captain_marvel-457800899-large.jpg" alt=""
+                          width="170" height="240">
+                 </a>
+                 <h3>Capitana Marvel</h3>
+                 <p> <span>año: </span>  2019 </p>
+                 <p> <span>tipo:</span> pelicula </p>
+            </div>
+
+            <div class="item">
+                <a class="link" href="#">
+                    <img class="img-caratula" src="https://pics.filmaffinity.com/iron_man-108960873-large.jpg" alt=""
+                          width="170" height="240">
+                 </a>
+                 <h3>Iron man - El hombre de hierro</h3>
+                 <p> <span>año: </span>  2008 </p>
+                 <p> <span>tipo:</span> pelicula </p>
+            </div>
+
+            <div class="item">
+                <a class="link" href="#">
+                    <img class="img-caratula" src="https://pics.filmaffinity.com/the_incredible_hulk-175130941-large.jpg" alt=""
+                          width="170" height="240">
+                 </a>
+                 <h3>Hulk: El hombre increíble</h3>
+                 <p> <span>año: </span>  2008 </p>
+                 <p> <span>tipo:</span> pelicula </p>
+            </div>
+
+            <div class="item">
+                <a class="link" href="#">
+                    <img class="img-caratula" src="https://pics.filmaffinity.com/iron_man_2-466103197-large.jpg" alt=""
+                          width="170" height="240">
+                 </a>
+                 <h3>Iron Man 2</h3>
+                 <p> <span>año: </span>  2010 </p>
+                 <p> <span>tipo:</span> pelicula </p>
+            </div>
+
+            <div class="item">
+                <a class="link" href="#">
+                    <img class="img-caratula" src="https://pics.filmaffinity.com/thor-223512549-large.jpg" alt=""
+                          width="170" height="240">
+                 </a>
+                 <h3>Thor</h3>
+                 <p> <span>año: </span>  2011 </p>
+                 <p> <span>tipo:</span> pelicula </p>
+            </div>
+
+            <div class="item">
+                <a class="link" href="#">
+                    <img class="img-caratula" src="https://pics.filmaffinity.com/the_avengers-439499921-large.jpg" alt=""
+                          width="170" height="240">
+                 </a>
+                 <h3>Los Vengadores</h3>
+                 <p> <span>año: </span>  2012 </p>
+                 <p> <span>tipo:</span> pelicula </p>
+            </div>
+
+            <div class="item">
+                <a class="link" href="#">
+                    <img class="img-caratula" src="https://pics.filmaffinity.com/iron_man_3_aka_ironman_3-972235216-large.jpg" alt=""
+                          width="170" height="240">
+                 </a>
+                 <h3>Iron Man 3</h3>
+                 <p> <span>año: </span>  2013 </p>
+                 <p> <span>tipo:</span> pelicula </p>
+            </div>
+
+            <div class="item">
+                <a class="link" href="#">
+                    <img class="img-caratula" src="https://pics.filmaffinity.com/thor_the_dark_world-763570829-large.jpg" alt=""
+                          width="170" height="240">
+                 </a>
+                 <h3>Thor: Un mundo oscuro</h3>
+                 <p> <span>año: </span>  2013 </p>
+                 <p> <span>tipo:</span> pelicula </p>
+            </div>
+
+            <div class="item">
+                <a class="link" href="#">
+                    <img class="img-caratula" src="https://pics.filmaffinity.com/captain_america_the_winter_soldier-333149071-large.jpg" alt=""
+                          width="170" height="240">
+                 </a>
+                 <h3>Capitán América y el soldado del invierno</h3>
+                 <p> <span>año: </span>  2014 </p>
+                 <p> <span>tipo:</span> pelicula </p>
+            </div>
+
+            <div class="item">
+                <a class="link" href="#">
+                    <img class="img-caratula" src="https://pics.filmaffinity.com/guardians_of_the_galaxy-595487268-large.jpg" alt=""
+                          width="170" height="240">
+                 </a>
+                 <h3>Guardianes de la galaxia</h3>
+                 <p> <span>año: </span>  2014 </p>
+                 <p> <span>tipo:</span> pelicula </p>
+            </div>
+
+            <div class="item">
+                <a class="link" href="#">
+                    <img class="img-caratula" src="https://pics.filmaffinity.com/guardians_of_the_galaxy_vol_2-755407784-large.jpg" alt=""
+                          width="170" height="240">
+                 </a>
+                 <h3>Guardianes de la galaxia Vol. 2</h3>
+                 <p> <span>año: </span>  20117</p>
+                 <p> <span>tipo:</span> pelicula </p>
+            </div>
+
+            <div class="item">
+                <a class="link" href="#">
+                    <img class="img-caratula" src="https://pics.filmaffinity.com/avengers_age_of_ultron_the_avengers_2-182285335-large.jpg" alt=""
+                          width="170" height="240">
+                 </a>
+                 <h3>Avengers: Era de Ultrón</h3>
+                 <p> <span>año: </span>  2015 </p>
+                 <p> <span>tipo:</span> pelicula </p>
+            </div>
+
+            <div class="item">
+                <a class="link" href="#">
+                    <img class="img-caratula" src="https://pics.filmaffinity.com/ant_man-627211491-large.jpg" alt=""
+                          width="170" height="240">
+                 </a>
+                 <h3>Ant-Man: El hombre hormiga</h3>
+                 <p> <span>año: </span>  2015 </p>
+                 <p> <span>tipo:</span> pelicula </p>
+            </div>
+
+            <div class="item">
+                <a class="link" href="#">
+                    <img class="img-caratula" src="https://pics.filmaffinity.com/captain_america_civil_war_aka_captain_america_3-298011137-large.jpg" alt=""
+                          width="170" height="240">
+                 </a>
+                 <h3>Capitán América: Civil War</h3>
+                 <p> <span>año: </span>  2016 </p>
+                 <p> <span>tipo:</span> pelicula </p>
+            </div>
+
+            <div class="item">
+                <a class="link" href="#">
+                    <img class="img-caratula" src="https://pics.filmaffinity.com/black_widow-372790622-large.jpg" alt=""
+                          width="170" height="240">
+                 </a>
+                 <h3>Black Widow</h3>
+                 <p> <span>año: </span>  2021 </p>
+                 <p> <span>tipo:</span> pelicula </p>
+            </div>
+
+            <div class="item">
+                <a class="link" href="#">
+                    <img class="img-caratula" src="https://pics.filmaffinity.com/black_panther-992613805-large.jpg" alt=""
+                          width="170" height="240">
+                 </a>
+                 <h3>Black Panther</h3>
+                 <p> <span>año: </span>  2018 </p>
+                 <p> <span>tipo:</span> pelicula </p>
+            </div>
+
+            <div class="item">
+                <a class="link" href="#">
+                    <img class="img-caratula" src="https://pics.filmaffinity.com/doctor_strange-883697036-large.jpg" alt=""
+                          width="170" height="240">
+                 </a>
+                 <h3>Doctor Strange: Hechicero Supremo</h3>
+                 <p> <span>año: </span>  2016 </p>
+                 <p> <span>tipo:</span> pelicula </p>
+            </div>
+
+            <div class="item">
+                <a class="link" href="#">
+                    <img class="img-caratula" src="https://pics.filmaffinity.com/spider_man_homecoming-336093112-large.jpg" alt=""
+                          width="170" height="240">
+                 </a>
+                 <h3>Spider-Man: De regreso a casa</h3>
+                 <p> <span>año: </span>  2017 </p>
+                 <p> <span>tipo:</span> pelicula </p>
+            </div>
+
+            <div class="item">
+                <a class="link" href="#">
+                    <img class="img-caratula" src="https://pics.filmaffinity.com/ant_man_and_the_wasp-808025952-large.jpg" alt=""
+                          width="170" height="240">
+                 </a>
+                 <h3>Ant-Man and The Wasp</h3>
+                 <p> <span>año: </span>  2018 </p>
+                 <p> <span>tipo:</span> pelicula </p>
+            </div>
+
+            <div class="item">
+                <a class="link" href="#">
+                    <img class="img-caratula" src="https://pics.filmaffinity.com/thor_ragnarok-115636540-large.jpg" alt=""
+                          width="170" height="240">
+                 </a>
+                 <h3>Thor: Ragnarok</h3>
+                 <p> <span>año: </span>  2017 </p>
+                 <p> <span>tipo:</span> pelicula </p>
+            </div>
+
+            <div class="item">
+                <a class="link" href="#">
+                    <img class="img-caratula" src="https://pics.filmaffinity.com/avengers_infinity_war-181539353-large.jpg" alt=""
+                          width="170" height="240">
+                 </a>
+                 <h3>Avengers: Infinity War</h3>
+                 <p> <span>año: </span>  2018 </p>
+                 <p> <span>tipo:</span> pelicula </p>
+            </div>
+
+            <div class="item">
+                <a class="link" href="#">
+                    <img class="img-caratula" src="https://pics.filmaffinity.com/avengers_endgame-135478227-large.jpg" alt=""
+                          width="170" height="240">
+                 </a>
+                 <h3>Avengers: Endgame</h3>
+                 <p> <span>año: </span>  2019 </p>
+                 <p> <span>tipo:</span> pelicula </p>
+            </div>
+
+            <div class="item">
+                <a class="link" href="#">
+                    <img class="img-caratula" src="https://pics.filmaffinity.com/wandavision-568232831-large.jpg" alt=""
+                          width="170" height="240">
+                 </a>
+                 <h3>WandaVision</h3>
+                 <p> <span>año: </span>  2021 </p>
+                 <p> <span>tipo:</span> Serie </p>
+            </div>
+
+            <div class="item">
+                <a class="link" href="#">
+                    <img class="img-caratula" src="https://pics.filmaffinity.com/the_falcon_and_the_winter_soldier-780494950-large.jpg" alt=""
+                          width="170" height="240">
+                 </a>
+                 <h3>Falcon y el Soldado del Invierno</h3>
+                 <p> <span>año: </span>  2021 </p>
+                 <p> <span>tipo:</span> Serie </p>
+            </div>
+
+            <div class="item">
+                <a class="link" href="#">
+                    <img class="img-caratula" src="https://pics.filmaffinity.com/spider_man_far_from_home-339542528-large.jpg" alt=""
+                          width="170" height="240">
+                 </a>
+                 <h3>Spider-Man: Lejos de casa</h3>
+                 <p> <span>año: </span>  2019 </p>
+                 <p> <span>tipo:</span> pelicula </p>
+            </div>
+
+            <div class="item">
+                <a class="link" href="#">
+                    <img class="img-caratula" src="https://pics.filmaffinity.com/spider_man_no_way_home-642739124-large.jpg" alt=""
+                          width="170" height="240">
+                 </a>
+                 <h3>Spider-Man: Sin camino a casa</h3>
+                 <p> <span>año: </span>  2021 </p>
+                 <p> <span>tipo:</span> pelicula </p>
+            </div>
+
+            <div class="item">
+                <a class="link" href="#">
+                    <img class="img-caratula" src="https://pics.filmaffinity.com/loki-849839433-large.jpg" alt=""
+                          width="170" height="240">
+                 </a>
+                 <h3>Loki </h3>
+                 <p> <span>año: </span>  2021 </p>
+                 <p> <span>tipo:</span> Serie </p>
+            </div>
+
+            <div class="item">
+                <a class="link" href="#">
+                    <img class="img-caratula" src="https://pics.filmaffinity.com/eternals-388789083-large.jpg" alt=""
+                          width="170" height="240">
+                 </a>
+                 <h3>Eternals</h3>
+                 <p> <span>año: </span>  2021 </p>
+                 <p> <span>tipo:</span> pelicula </p>
+            </div>
+
+            <div class="item">
+                <a class="link" href="#">
+                    <img class="img-caratula" src="https://pics.filmaffinity.com/shang_chi_and_the_legend_of_the_ten_rings-111813706-large.jpg" alt=""
+                          width="170" height="240">
+                 </a>
+                 <h3>Shang-Chi y la leyenda de los diez anillos</h3>
+                 <p> <span>año: </span>  2021 </p>
+                 <p> <span>tipo:</span> pelicula </p>
+            </div>
+
+            <div class="item">
+                <a class="link" href="#">
+                    <img class="img-caratula" src="https://pics.filmaffinity.com/hawkeye-585920449-large.jpg" alt=""
+                          width="170" height="240">
+                 </a>
+                 <h3>Hawkeye </h3>
+                 <p> <span>año: </span>  2021 </p>
+                 <p> <span>tipo:</span> Serie </p>
+            </div>
+
+            <div class="item">
+                <a class="link" href="#">
+                    <img class="img-caratula" src="https://pics.filmaffinity.com/doctor_strange_in_the_multiverse_of_madness-610981386-large.jpg" alt=""
+                          width="170" height="240">
+                 </a>
+                 <h3>Doctor Strange en el multiverso de la locura</h3>
+                 <p> <span>año: </span>  2022 </p>
+                 <p> <span>tipo:</span> pelicula </p>
+            </div>
+
+            <div class="item">
+                <a class="link" href="#">
+                    <img class="img-caratula" src="https://pics.filmaffinity.com/moon_knight-515370530-large.jpg" alt=""
+                          width="170" height="240">
+                 </a>
+                 <h3>Moon Knight</h3>
+                 <p> <span>año: </span>  2022 </p>
+                 <p> <span>tipo:</span> Serie </p>
+            </div>
+
+            <div class="item">
+                <a class="link" href="#">
+                    <img class="img-caratula" src="https://pics.filmaffinity.com/ms_marvel-562663554-large.jpg" alt=""
+                          width="170" height="240">
+                 </a>
+                 <h3>Ms. Marvel</h3>
+                 <p> <span>año: </span>  2022 </p>
+                 <p> <span>tipo:</span> Serie </p>
+            </div>
+
+            <div class="item">
+                <a class="link" href="#">
+                    <img class="img-caratula" src="https://pics.filmaffinity.com/thor_love_and_thunder-566116133-large.jpg" alt=""
+                          width="170" height="240">
+                 </a>
+                 <h3>Thor: Amor y trueno</h3>
+                 <p> <span>año: </span>  2022 </p>
+                 <p> <span>tipo:</span> pelicula </p>
+            </div>
+
+            <!-- <div class="item">
+                <a class="link" href="#">
+                    <img class="img-caratula" src="https://pics.filmaffinity.com/thor-223512549-large.jpg" alt=""
+                          width="170" height="240">
+                 </a>
+                 <h3>Thor</h3>
+                 <p> <span>año: </span>  2011 </p>
+            </div> -->
+      </div>
+      <!-- strenos end -->
+
+      <!-- footer start -->
+      <div class="footer">
+      
+         <p class="credit"> Created By <span>Strange.dev</span> | ¡tu eres una enferma y este bicho es el único que te va a curar! </p>
+
+      </div>
+      <!-- footer end -->
+   </div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+<script src="cronologico.js"></script>
+</body>
+</html>
