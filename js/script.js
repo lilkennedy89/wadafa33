@@ -67,32 +67,39 @@
 })();
 
 
+const swiper = new Swiper(".swiper-hero", {
+  // Optional parameters
+  // slidesPerView: "auto",
+  // spaceBetween: 15,
+  // slidesPerGroupAuto: true,
 
-//slider js
+  direction: "horizontal",
+  loop: true,
+  // allowTouchMove: true,
+  // effect: "cube",
+  autoplay: {
+    delay: 4000,
+    pauseOnMouseEnter: true,
+    disableOnInteraction: false,
+  },
 
-(function(){
-  const sliders = [...document.querySelectorAll('.slider-body')];
-  const arrowNext = document.querySelector('#next');
-  const arrowBefore = document.querySelector('#before');
-  let value;
+  // If we need pagination
+  pagination: {
+    el: ".swiper-pagination",
+    // type: "progressbar"
+    clickable: true,
+    // dynamicBullets: true
+  },
 
-  arrowNext.addEventListener('click', () => changePosition(1));
+  // Navigation arrows
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
 
-  arrowBefore.addEventListener('click', () => changePosition(-1));
-
-  function changePosition(change){
-      const currentElement = Number (document.querySelector('.slider-body--show').dataset.id);
-
-      value = currentElement;
-      value+= change;
-
-      console.log(sliders.length)
-      if(value == 0 || value == sliders.length+1 ){
-          value = value === 0 ? sliders.length : 1;
-      }
-
-      sliders[currentElement-1].classList.toggle('slider-body--show');
-      sliders[value-1].classList.toggle('slider-body--show');
-  }
-
-})()
+  // And if we need scrollbar
+  // scrollbar: {
+  //   el: ".swiper-scrollbar",
+  //   draggable: true,
+  // },
+});

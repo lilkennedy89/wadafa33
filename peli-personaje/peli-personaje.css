@@ -17,7 +17,7 @@ ul{
 a{
 	text-decoration: none;
 }
-/*header start*/
+/*header*/
 .header {
 	background-color: #141922;
 	border-radius: 20px;
@@ -279,7 +279,6 @@ a{
 	}
 }
 
-/* header end */
 /* crono */
 #crono {
 	background: #1d3557;
@@ -287,23 +286,27 @@ a{
 	padding: 0 7px;
 }
 
-
 /* displey gid start */
 .header {
 	grid-area: header;
+	margin-bottom: 60px;
 }
 
-.linia-time {
-	grid-area: linia-time;
+.swiper {
+	grid-area: swiper;
+	/* background: #18142f; */
 }
 
-/* .lista-cap {
-	grid-area: lista-cap;
-	border-top: 0.1rem solid rgba(255, 255, 255, 0.2);
-} */
+.peli-estrenos {
+	margin-top: 20px;
+	grid-area: peli-estrenos;
+	/* background: #18142f; */
+}
 
 .footer {
-    grid-area: footer;
+	grid-area: footer;
+	/* background: #9b2ead; */
+	/* border-top: 0.1rem solid rgba(255, 255, 255, 0.2); */
 }
 
 .grid-container {
@@ -313,206 +316,195 @@ a{
 
 	grid-template: 
 	"header" auto
-	"linia-time" auto
-	"footer"	50px /
+	"swiper" auto
+	"peli-estrenos" auto
+	"footer"	auto /
 	auto;
 }
 /* displey grid end */
 
-/* linia de tiempo start */
-.start-time-line {
-	grid-area: start-time-line;
-	/* outline: 2px solid #000; */
+
+
+/* SLIDER START */
+.swiper {
+    width: 100%;
+    /* max-width: 1600px; */
 }
 
-.uno {
-	grid-area: uno;
-}
 
-.dos {
-	grid-area: dos;
+.slider-texts {
+	grid-area: slider-texts;
+	margin-left: 70px;
 }
-
-.tres {
-	grid-area: tres;
+.slider-picture {
+	grid-area: slider-picture;
+	margin-right: 70px;
 }
-
-.cuatro {
-	grid-area: cuatro;
-}
-
-.cinco {
-	grid-area: cinco;
-}
-
-.seis {
-	grid-area: seis;
-}
-
-.siete {
-	grid-area: siete;
-}
-
-.ocho {
-	grid-area: ocho;
-}
-
-.nueve {
-	grid-area: nueve;
-}
-
-.diez {
-	grid-area: diez;
-}
-
-.once {
-	grid-area: once;
-}
-
-.doce {
-	grid-area: doce;
-}
-
-.trece {
-	grid-area: trece;
-}
-
-.linia-time {
+.swiper-slide {
 	display: grid;
 	width: 100%;
 	height: auto;
-	margin-top: 20px;
-	gap: 15px 0;
-
 	grid-template: 
-	"start-time-line" auto
-	"uno"	auto
-	"dos"	auto
-	"tres"	auto
-	"cuatro"	auto
-	"cinco"	auto
-	"seis"	auto
-	"siete"	auto
-	"ocho"	auto
-	"nueve"	auto
-	"diez"	auto
-	"once" auto
-	"doce"	auto
-	"trece"	auto /
-	auto ;
+	"slider-texts	slider-picture" auto /
+	auto			auto ;
 
-}
-
-.start-time-line {
-	margin-bottom: 20px;
-}
-
-.linia {
-	display: grid;
-	align-items: center;
-	/* display: inline; */
-	grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
-	gap: 15px 15px;
-	padding: 20px 30px;
-}
-
-.linia a {
-	color: #18142f;
-}
-
-.fecha {
-	background-color: #32a4ba;
-	padding: 10px 10px;
-	text-align: center;
-	border-radius: 10px;
-	transition: 300ms;
-	font-size: 18px;
-
-}
-
-.fecha:hover {
-	background-color: #eee;
-}
-
-.titulo-a {
-	grid-area: titulo-a;
-	cursor: default;
+	justify-content: space-between;
 	
-	outline: 2px solid #000;
-	background: #282248;
-	margin: 0 20px;
 }
 
-.contenedorpeli {
-	grid-area: contenedorpeli;
+.slider-texts h2 {
+	color: #eeee;
+}
+.slider-texts p {
+	color: #8799b4;
 }
 
-.seccion {
-	display: grid;
-	width: 100%;
-	height: auto;
-	grid-template: 
-	"titulo-a" 30px
-	"contenedorpeli" auto /
-	auto;
+.slider-img {
+    width: 230px;
+    height: auto;
 }
 
-.contenedorpeli {
+@media (max-width: 768px) {
+	.swiper-slide {
+		text-align: center;
+		display: grid;
+		width: 100%;
+		height: auto;
+		grid-template: 
+		"slider-texts" auto
+		"slider-picture"	auto /
+		auto ;
+	
+		justify-content: space-between;
+		
+	}
+
+	.slider-img {
+		width: 170px;
+		height: auto;
+		margin: 20px;
+	}
+
+	.slider-texts {
+		margin: 0 20px;
+	}
+	.slider-picture {
+		margin-right: 0;
+		margin-bottom: 10px;
+	}
+
+	.swiper-hero .swiper-button-prev,
+	.swiper-hero .swiper-button-next {
+  		margin-left: 0;   /*magenss del boton*/
+  		margin-right: 0;  /*magenss del boton*/
+	}
+
+	.header {
+		grid-area: header;
+		margin-bottom: 20px;
+	}
+}
+
+@media (min-width: 768px) {
+	.slider-texts {
+		margin-right: 100px;
+	}
+	
+}
+
+.swiper-hero .swiper-button-prev,
+.swiper-hero .swiper-button-next {
+  --swiper-navigation-size: 20px;
+  background-color: #01a781;
+  height: 70px;
+  width: 50px;
+  margin-top: -35px;
+  margin-left: 20px;   /*magenss del boton*/
+  margin-right: 20px;  /*magenss del boton*/
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.swiper-hero .swiper-button-prev {
+    /* border-radius: 10px 65px 65px 10px; */
+	border-radius: 30px;
+    left: -10px;
+	color: #eeee;
+}
+.swiper-hero .swiper-button-next {
+  /* border-radius: 65px 0 0 65px; */
+  border-radius: 30px;
+  right: -10px;
+  color: #eeee;
+}
+.swiper-hero:hover .swiper-button-prev,
+.swiper-hero:hover .swiper-button-next {
+  opacity: 1;
+}
+.swiper-hero .swiper-pagination {
+  --swiper-pagination-color: #01a781;
+  --swiper-pagination-bullet-size: 10px;
+  --swiper-pagination-bullet-inactive-color: #000;
+  --swiper-pagination-bullet-inactive-opacity: 0.25;
+  --swiper-pagination-bullet-opacity: 1;
+  --swiper-pagination-bullet-horizontal-gap: 3px;
+}
+.swiper-hero .swiper-pagination-bullet {
+  box-shadow: inset 0 0 0 1px #fff;
+}
+.swiper-hero .swiper-pagination-bullet-active {
+  box-shadow: 0 0 0 1px rgba(243, 6, 6, 0.25);
+}
+
+/* SLIDER END */
+
+
+
+
+/* grid container de pelicuals */
+.grid-container-pelis {
     text-align: center;
+    margin-top: 20px;
+    margin-left: 30px;
+    margin-right: 30px;
     display: grid;
     gap: 10px;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
 
-.contenedorpeli > div {
+.grid-container-pelis > div {
     height: 300px;
     text-align: center;
-	margin-top: 20px;
 }
-
-.titulo-a {
-	display: flex;
-	justify-content: start;
-	align-items: center;
-	justify-content: center;
-	color: #eee;
-}
-
-.link {
-	color: #eeee;
-}
+/*contenedor grid-----final*/
 
 .img-caratula {
-	margin-bottom: 5px;
-	transition: 300ms;
+    margin-top: 10px;
+
+    transition: 300ms;
 }
 
 .img-caratula:hover {
-	transform: scale(1.05);
-}
-/* linia de tiempo end */
-
-
-/* boton arriba start */
-
-#botonArriba {
-	position: fixed;
-	bottom: 20px;
-	right: -100px;
-	width: 50px;
-
-	transition: 300ms;
+    transform: scale(1.07);
 }
 
-#botonArriba:hover{
-	transform: scale(1.5);
+.link h3 {
+    margin-top: 7px;
+    font-size: 0.9rem;
 }
 
-/* .icono-arriba {
-	background: yellow;
-} */
+.link {
+    text-decoration: none;
+    color: white;
+}
 
-/* boton arriba end */
+
+
+
+
+
+
+
+
 
 
 
@@ -623,4 +615,4 @@ html::-webkit-scrollbar {
 	border-radius: 2px;
   }
 
-/* scrool abr end *
+/* scrool abr end */
